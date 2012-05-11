@@ -1,0 +1,16 @@
+application: localsquare-beta
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /files
+  static_dir: files
+- url: /pics
+  static_dir: pics
+
+- url: /.*
+  script: _localsq.py

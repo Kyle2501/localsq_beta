@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>beta / map - localsq . elkhorn labs</title>
+<link rel="stylesheet" href="../files/localsq.css" type="text/css" />
+
+<style>
+
+body {
+	background-color: #fff;
+	background-image: none;
+}
+
+</style>
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript"
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBWYwYTl_HDFtRHDYSk8sSvcAI1WUOemEw&sensor=true">
+</script>
+<script type="text/javascript">
+var map;
+var stanley = new google.maps.LatLng(44.2114, -114.9450);
+var ketchum = new google.maps.LatLng(43.68, -114.36);
+var hailey = new google.maps.LatLng(43.5197, -114.3144);
+
+
+
+function StanleyControl(controlDiv, map) {
+
+  controlDiv.style.padding = '5px';
+
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to set the map to Home';
+  controlDiv.appendChild(controlUI);
+
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'colaborate", sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '4px';
+  controlText.style.paddingRight = '4px';
+  controlText.innerHTML = '<strong>Stanley<strong>'
+  controlUI.appendChild(controlText);
+
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(stanley)
+  });
+}
+
+
+function KetchumControl(controlDiv, map) {
+
+  controlDiv.style.padding = '5px';
+
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to set the map to Home';
+  controlDiv.appendChild(controlUI);
+
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'colaborate", sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '4px';
+  controlText.style.paddingRight = '4px';
+  controlText.innerHTML = '<strong>Ketchum<strong>'
+  controlUI.appendChild(controlText);
+
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(ketchum)
+  });
+}
+
+function HaileyControl(controlDiv, map) {
+
+  controlDiv.style.padding = '5px';
+
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to set the map to Home';
+  controlDiv.appendChild(controlUI);
+
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'colaborate", sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '4px';
+  controlText.style.paddingRight = '4px';
+  controlText.innerHTML = '<strong>Hailey<strong>'
+  controlUI.appendChild(controlText);
+
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(hailey)
+  });
+}
+
+
+function initialize() {
+  var mapDiv = document.getElementById('map_canvas');
+  var myOptions = {
+    zoom: 13,
+    center: ketchum,
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  }
+  map = new google.maps.Map(mapDiv, myOptions);
+
+  var stanleyControlDiv = document.createElement('div');
+  var stanleyControl = new StanleyControl(stanleyControlDiv, map);
+
+  stanleyControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(stanleyControlDiv);
+
+  var ketchumControlDiv = document.createElement('div');
+  var ketchumControl = new KetchumControl(ketchumControlDiv, map);
+
+  ketchumControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(ketchumControlDiv);
+  
+  var haileyControlDiv = document.createElement('div');
+  var haileyControl = new HaileyControl(haileyControlDiv, map);
+  
+  haileyControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(haileyControlDiv);
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31549004-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body onload="initialize()">
+
+<!-- - run Content - -->
+<div id="map_canvas" style="width:100%; height:100%; top: 25px; position: fixed;"></div>
+<!-- - Content fin - -->
+
+<!-- - run Menu Bar - -->
+<div id="menubar">
+  <div id="menu">
+    <ul id="menu_left">
+      <li><a class="menu" href="weather">Weather</a></li>
+      <li><a class="on" href="map">Map</a></li>
+      <li><a class="menu" href="events">Events</a></li>
+    </ul><!-- - /menu_left - -->
+    <div id="logo"><a href="/"><img src="../pics/logo.png" /></a></div>
+    <ul id="menu_right">
+      <li><a class="menu" href="market">Market</a></li>
+      <li><a class="menu" href="directory">Directory</a></li>
+      <li><a class="menu" href="message">Message</a></li>
+    </ul><!-- - /menu_right - -->
+  </div><!-- - /menu - -->
+</div><!-- - /menubar - -->
+<!-- - Menu Bar fin - -->
+
+</div><!-- - /menubar - -->
+<!-- - Menu Bar fin - -->
+
+<div id="weather">
+{{ weather }}&deg;f
+</div><!-- - /weather - -->
+
+<div id="time">
+{{ day }}<br />
+{{ clock }}<br />
+{{ month }}
+</div><!-- - /time - -->
+
+<!-- - run Footer - -->
+<footer>
+  <div id="footer">
+    <div id="footer_left">
+      <ul>
+        <li><a href="about">About</a></li>
+        <li><a href="feedback">Feedback</a></li>
+        <li><a href="#">Blog <span class="smaller">(coming soon!)</span></a></li>
+        <li><form id="donate" action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/867388201863652" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">$<input type="number" class="donate" name="item_price_1" value="5" /> <input type="submit" name="submit" step="5" value="Tip Us" style="background:none;border:0;padding:1;color:#5E6363;font-size: .9em;">
+        <input name="item_name_1" type="hidden" value="localsq tip"/>
+        <input name="item_description_1" type="hidden" value=""/>
+        <input name="item_quantity_1" type="hidden" value="1"/>
+        <input name="item_currency_1" type="hidden" value="USD"/>
+        <input name="shopping-cart.items.item-1.digital-content.url" type="hidden" value="http://sv.localsq.us/"/>
+        <input name="_charset_" type="hidden" value="utf-8"/>
+         </form></li>
+         <li><a href="ticket">Season Pass</a></li>
+      </ul>
+    </div><!-- - /footer_left - -->
+    <div id="footer_right">
+      <ul>
+        <li>localsq</li>
+        <li><span class="smaller">&#169; 2012</span></li>
+        <li><a href="http://kyle.elkhornlabs.com/" target="_blank">Built by Elkhorn Labs</a></li>
+      </ul>
+    </div><!-- - /footer_right - -->
+  </div><!-- - /footer - -->
+</footer>
+<!-- - Footer fin - -->
+
+</body>
+<foot>
+<!-- - run Google Web Fonts - -->
+<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+
+
+</foot>
+</html>

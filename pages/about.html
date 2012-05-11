@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>beta / about - localsq . elkhorn labs</title>
+<link rel="stylesheet" href="../files/localsq.css" type="text/css" />
+<style>
+
+body
+{
+  background-color: #F3FFFF;
+  background-image: none;
+}
+
+a
+{
+  color: #10B2AA;
+}
+
+#logo
+{
+  top: -7px;
+}
+
+#logo:hover 
+{
+  top: -13px;
+  -webkit-transition: all .5s linear;
+}
+
+.about_list
+{
+  font-family: 'CallunaSansRegular';
+  font-size: 24px;
+  text-align: center;
+}
+
+.about_locaslsq
+{
+  font-family: 'CallunaSansRegular';
+}
+
+.about_text
+{
+  font-family: 'CallunaSansRegular';
+  font-size: 24px;
+  text-align: left;
+}
+
+.about_title1
+{
+  font-family: 'Carton-Slab';
+  font-size: 48px;
+}
+
+.about_title2
+{
+  font-family: 'Carton-Slab';
+  font-size: 24px;
+}
+
+#about
+{
+  width: 700px;
+  margin: 0 auto;
+}
+
+table
+{
+  width: 420px;
+  margin: 0 auto;
+  font-family: 'CallunaSansRegular';
+}
+
+td.left
+{
+  font-family: 'CallunaSansRegular';
+  text-align: right;
+}
+
+td.icon
+{
+  font-family: 'EntypoRegular';
+  text-align: right;
+}
+
+a
+{
+  color: #9DD9DD;
+}
+
+td.right
+{
+  font-family: 'CallunaSansRegular';
+  text-align: left;
+}
+
+#about_credit 
+{
+  width: 570px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 150px;
+}
+
+#about_gear
+{
+  float: left;
+  padding-left: 40px;
+}
+
+.gear
+{
+  color: #555;
+  font-size: 160px;
+}
+
+#about_text
+{
+  text-align: left;
+  font-family: 'CallunaSansRegular';
+  font-size: 18px;
+  line-height: 1.6em;
+  padding-top: 35px;
+}
+
+
+</style>
+</head>
+<body>
+<div id="wrap">
+
+<!-- - run Menu Bar - -->
+<div id="menubar">
+  <div id="menu">
+    <ul id="menu_left">
+      <li><a class="menu" href="weather">Weather</a></li>
+      <li><a class="menu" href="map">Map</a></li>
+      <li><a class="menu" href="events">Events</a></li>
+    </ul><!-- - /menu_left - -->
+    <div id="logo"><a href="/"><img src="../pics/logo.png" /></a></div>
+    <ul id="menu_right">
+      <li><a class="menu" href="market">Market</a></li>
+      <li><a class="menu" href="directory">Directory</a></li>
+      <li><a class="menu" href="message">Message</a></li>
+    </ul><!-- - /menu_right - -->
+  </div><!-- - /menu - -->
+</div><!-- - /menubar - -->
+<!-- - Menu Bar fin - -->
+
+<div id="content">
+  <div id="about">
+    <div class="about_localsq">
+      <p class="about_title1">About localsq</p>
+      <p class="about_text">localsq is a virtual town square for locals and tourists. www.localsq.us was built because we saw that the locals and the tourists needed an online destination to discover the magic and charm that Sun Valley holds.</p>
+    </div><!-- - /about_localsq - -->
+    <div class="about_list">
+    <p class="about_title2">Here on LocalSq You Can</p>
+    <table>
+      <tr>
+        <td class="left">Discover</td> 
+        <td class="icons"><a href="directory">$</a></td> 
+        <td class="right">Shops</td>
+      </tr>
+      <tr>
+        <td class="left">Find and Share</td> 
+        <td class="icons"><a href="events">P</a></td> 
+        <td class="right">Events</td>
+      </tr>
+      <tr>
+        <td class="left">Check the</td> 
+        <td class="icons"><a href="lookout">y</a></td> 
+        <td class="right">Weather</td>
+      </tr>
+      <tr>
+        <td class="left">View street</td> 
+        <td class="icons"><a href="map">2</a></td> 
+        <td class="right">Maps</td>
+      </tr>
+      <tr>
+        <td class="left">Peek at</td> 
+        <td class="icons"><a href="baldy">p</a></td> 
+        <td class="right">Webcams</td>
+      </tr>
+    </table>
+    <p id="about_welcome">We welcome you to <a href="join">join</a> and help grow our little community.</p>
+  </div><!-- - /about_list - -->
+  <div id="about_credit">
+    <div id="about_gear"><span class="icons gear">@</span></div>
+    <div id="about_text">localsq is a product of Elkhorn Labs, a team of two living in Sun Valley and NYC. <a href="https://twitter.com/#!/uwenna">Anne</a> is the front-end designer and <a href="https://twitter.com/#!/kyle2501">Kyle</a> builds the platform.
+    </div><!-- - /about_text - -->
+  </div><!-- - /about - -->
+</div><!-- - /content - -->
+
+<!-- - run Footer - -->
+<footer>
+  <div id="footer">
+    <div id="footer_left">
+      <ul>
+        <li><a href="about">About</a></li>
+        <li><a href="feedback">Feedback</a></li>
+        <li><a href="#">Blog <span class="smaller">(coming soon!)</span></a></li>
+        <li><form id="donate" action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/867388201863652" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">$<input type="number" class="donate" name="item_price_1" value="5" /> <input type="submit" name="submit" step="5" value="Tip Us" style="background:none;border:0;padding:1;color:#5E6363;font-size: .9em;">
+        <input name="item_name_1" type="hidden" value="localsq tip"/>
+        <input name="item_description_1" type="hidden" value=""/>
+        <input name="item_quantity_1" type="hidden" value="1"/>
+        <input name="item_currency_1" type="hidden" value="USD"/>
+        <input name="shopping-cart.items.item-1.digital-content.url" type="hidden" value="http://sv.localsq.us/"/>
+        <input name="_charset_" type="hidden" value="utf-8"/>
+         </form></li>
+         <li><a href="ticket">Season Pass</a></li>
+      </ul>
+    </div><!-- - /footer_left - -->
+    <div id="footer_right">
+      <ul>
+        <li>localsq</li>
+        <li><span class="smaller">&#169; 2012</span></li>
+        <li><a href="http://kyle.elkhornlabs.com/" target="_blank">Built by Elkhorn Labs</a></li>
+      </ul>
+    </div><!-- - /footer_right - -->
+  </div><!-- - /footer - -->
+</footer>
+<!-- - Footer fin - -->
+
+</div><!-- - /wrap - -->
+</body>
+<foot>
+
+</foot>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>beta / ticket - localsq . elkhorn labs / sun valley, idaho</title>
+<link href="../files/localsq.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+#thx {
+	width: 670px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #9DD9DD;
+	padding: 25px;
+	border-radius: 4px;
+}
+
+body
+{
+  background-color: #F3FFFF;
+  background-image: url(../files/classy_fabric.png);
+  color: #fff;
+  font-family: 'Carton-Slab';
+  font-size: 18px;
+}
+
+#form {
+	text-align: center;
+	width: 400px;
+	margin: 0 auto;
+}
+
+#season{
+	text-align: left;
+	padding-top: 50px;
+	font-family: 'CallunaSansRegular';
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+	display: none;
+	visibility: hidden;
+}
+
+a.season {
+	color: #eee;
+	-webkit-transition: all .5s linear;
+}
+
+a.season:hover{
+	color: #444;
+	-webkit-transition: all .5s linear;
+}
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31469401-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="wrap">
+
+<!-- - run Menu Bar - -->
+<div id="menubar">
+  <div id="menu">
+    <ul id="menu_left">
+      <li><a class="menu" href="weather">Weather</a></li>
+      <li><a class="menu" href="map">Map</a></li>
+      <li><a class="menu" href="events">Events</a></li>
+    </ul><!-- - /menu_left - -->
+    <div id="logo"><a href="/"><img src="pics/logo.png" /></a></div>
+    <ul id="menu_right">
+      <li><a class="menu" href="market">Market</a></li>
+      <li><a class="menu" href="directory">Directory</a></li>
+      <li><a class="menu" href="message">Message</a></li>
+    </ul><!-- - /menu_right - -->
+  </div><!-- - /menu - -->
+</div><!-- - /menubar - -->
+<!-- - Menu Bar fin - -->
+
+<div id="content">
+  <div id="thx">
+    <h3>welcome to localsq</h3>
+    <p>Summer Season Pass<br />
+    $75</p>
+    <form id="form"action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/867388201863652" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+    <input name="item_price_1" type="hidden" value="75" />
+    <input name="item_name_1" type="hidden" value="localsq summer season"/>
+    <input name="item_description_1" type="hidden" value=""/>
+    <input name="item_quantity_1" type="hidden" value="1"/>
+    <input name="item_currency_1" type="hidden" value="USD"/>
+    <input name="shopping-cart.items.item-1.digital-content.url" type="hidden" value="http://sv.localsq.us/"/>
+    <input name="_charset_" type="hidden" value="utf-8"/>
+
+      <p><input type="submit" value="Purchase Pass" />
+    </form>
+  </div><!-- - /thx - -->
+ 
+</div><!-- - /content - -->
+
+<div id="season">
+<p>Season Pass Includes</p>
+<ul>
+  <li><a class="season" href="#">Business Pages</a></li>
+  <li><a class="season" href="#">Donation Pages</a></li>
+  <li><a class="season" href="message/kyle">Message App</a></li>
+  <li><a class="season" href="hire/kyle">Hiring App</a></li>
+</ul>
+<p>Free Offerings</p>
+<ul>
+  <li><a class="season" href="lookout">Weather App</a></li>
+  <li><a class="season" href="map">Map App</a></li>
+  <li><a class="season" href="events">Events App</a></li>
+</ul>
+</div><!-- - /season - -->
+
+
+<!-- - run Footer - -->
+<footer>
+  <div id="footer">
+    <div id="footer_left">
+      <ul>
+        <li><a href="about">About</a></li>
+        <li><a href="feedback">Feedback</a></li>
+        <li><a href="#">Blog <span class="smaller">(coming soon!)</span></a></li>
+        <li><form id="donate" action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/867388201863652" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">$<input type="number" class="donate" name="item_price_1" value="5" /> <input type="submit" name="submit" step="5" value="Tip Us" style="background:none;border:0;padding:1;color:#5E6363;font-size: .9em;">
+        <input name="item_name_1" type="hidden" value="localsq tip"/>
+        <input name="item_description_1" type="hidden" value=""/>
+        <input name="item_quantity_1" type="hidden" value="1"/>
+        <input name="item_currency_1" type="hidden" value="USD"/>
+        <input name="shopping-cart.items.item-1.digital-content.url" type="hidden" value="http://sv.localsq.us/"/>
+        <input name="_charset_" type="hidden" value="utf-8"/>
+         </form></li>
+         <li><a href="season_pass">Season Pass</a></li>
+      </ul>
+    </div><!-- - /footer_left - -->
+    <div id="footer_right">
+      <ul>
+        <li>localsq</li>
+        <li><span class="smaller">&#169; 2012</span></li>
+        <li>Built by Elkhorn Labs</li>
+      </ul>
+    </div><!-- - /footer_right - -->
+  </div><!-- - /footer - -->
+</footer>
+<!-- - Footer fin - -->
+
+</div><!-- - /wrap - -->
+</body>
+<foot>
+
+</foot>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>beta / localsq . elkhorn labs</title>
+<link rel="stylesheet" href="../files/localsq.css" type="text/css" />
+
+<style>
+
+#logo
+{
+  top: -7px;
+}
+
+#logo:hover
+{
+  top: -13px;
+  -webkit-transition: all .5s linear;
+}
+
+body 
+{
+  background-color: #F3FFFF;
+  background-image: none;
+}
+
+.hover
+{
+  outline: 1px dashed black;
+  font-family: 'Wisdom_Script';
+}
+
+.info 
+{
+  visibility: hidden;
+  color: #F3FFFF;
+  -webkit-transition: all .5s linear;
+}
+
+.hover:hover .info 
+{
+  visibility: visible;
+  color: #000;
+  -webkit-transition: all .7s fade;
+}
+
+#mountain
+{
+  margin-top: 45px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+#signup
+{
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #9DD9DD;
+  padding: 25px;
+  border-radius: 4px;
+  font-family: 'Carton-Slab';
+  color: #fff;
+  padding-bottom: 0px;
+}
+
+#form {
+	text-align: left;
+	width: 400px;
+	margin: 0 auto;
+}
+
+#plan {
+	padding-bottom: 100px;
+	visibility: visible;
+}
+
+a.button_2 {
+	padding: 10px;
+	background-color: #eee;
+	-webkit-transition: all .5s linear;
+	
+	border-top-left-radius: 30px 50px;
+	border-bottom-left-radius: 30px 50px;
+	
+	border-top-right-radius: 30px 50px;
+	border-bottom-right-radius: 30px 50px;
+	
+	border: 1px solid #666;
+	box-shadow: 0px 3px 5px #777;
+}
+a.button_2:hover {
+	background-color: #ccc;
+	-webkit-transition: all .5s linear;
+	border: 1px solid #111;
+	border-top-left-radius: 10px 45px;
+	border-bottom-left-radius: 10px 45px;
+	
+	border-top-right-radius: 10px 45px;
+	border-bottom-right-radius: 10px 45px;
+	
+}
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31469401-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="wrap">
+<!-- - run Menu Bar - -->
+<div id="menubar">
+  <div id="menu">
+    <ul id="menu_left">
+      <li><a class="menu" href="weather">Weather</a></li>
+      <li><a class="menu" href="map">Map</a></li>
+      <li><a class="menu" href="events">Events</a></li>
+    </ul><!-- - /menu_left - -->
+    <div id="logo"><a href="/"><img src="../pics/logo.png" /></a></div>
+    <ul id="menu_right">
+      <li><a class="menu" href="market">Market</a></li>
+      <li><a class="menu" href="directory">Directory</a></li>
+      <li><a class="menu" href="message">Message</a></li>
+    </ul><!-- - /menu_right - -->
+  </div><!-- - /menu - -->
+</div><!-- - /menubar - -->
+<!-- - Menu Bar fin - -->
+
+<div id="content">
+  <p id="subtitle"><span class="subtitle">- Beta Version -</span></p>
+  <div id="mountain">
+    <a class="none" href="baldy"><img src="/pics/baldy.png" width="100%" /></a>
+  </div>
+  <div class="tt-text">
+    <ul class="tt-wrapper">
+      <li><a class="tt-about" href="about">`<span>Information</span></a></li>
+      <li><a class="tt-map" href="map">0<span>Maps</span></a></li>
+      <li><a class="tt-gallery" href="about">D<span>Photos</span></a></li>
+      <li><a class="tt-messages" href="contact/localsq">9<span>Messages</span></a></li>
+    </ul><!-- - /tt-wrapper - -->
+  </div><!-- - /tt-text - -->
+     
+    <form  id="form" action="/signup" method="post">
+      <p><span class="price">Name:</span><br />
+      <input type="text" name="name" placeholder="name" required /></p>
+      <p><span class="price">Contact Info:</span><br />
+      <input type="text" name="contact" placeholder="contact information" required /></p>
+      <p align="center" id="join"><button type="submit" class="send">Join</button></p> 
+    </form>
+<div id="plan">
+  <p id="price"><span class="price">Summer Season<br />$75</span></p>
+</div><!-- - /plan - -->
+
+</div><!-- - /content - -->
+
+
+<!-- - run Footer - -->
+<footer>
+  <div id="footer">
+    <div id="footer_left">
+      <ul>
+        <li><a href="about">About</a></li>
+        <li><a href="feedback">Feedback</a></li>
+        <li><a href="#">Blog <span class="smaller">(coming soon!)</span></a></li>
+        <li><form id="donate" action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/867388201863652" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">$<input type="number" class="donate" name="item_price_1" value="5" /> <input type="submit" name="submit" step="5" value="Tip Us" style="background:none;border:0;padding:1;color:#5E6363;font-size: .9em;">
+        <input name="item_name_1" type="hidden" value="localsq tip"/>
+        <input name="item_description_1" type="hidden" value=""/>
+        <input name="item_quantity_1" type="hidden" value="1"/>
+        <input name="item_currency_1" type="hidden" value="USD"/>
+        <input name="shopping-cart.items.item-1.digital-content.url" type="hidden" value="http://sv.localsq.us/"/>
+        <input name="_charset_" type="hidden" value="utf-8"/>
+         </form></li>
+         <li><a href="ticket">Season Pass</a></li>
+      </ul>
+    </div><!-- - /footer_left - -->
+    <div id="footer_right">
+      <ul>
+        <li>localsq</li>
+        <li><span class="smaller">&#169; 2012</span></li>
+        <li><a href="http://kyle.elkhornlabs.com/" target="_blank">Built by Elkhorn Labs</a></li>
+      </ul>
+    </div><!-- - /footer_right - -->
+  </div><!-- - /footer - -->
+</footer>
+<!-- - Footer fin - -->
+
+</div><!-- - /wrap - -->
+</body>
+<foot>
+
+</foot>
+</html>

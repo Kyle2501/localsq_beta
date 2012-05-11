@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>beta / feedback - localsq . elkhorn labs</title>
+<link rel="stylesheet" href="../files/localsq.css" type="text/css" />
+<style>
+
+#signup
+{
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #9DD9DD;
+  padding: 25px;
+  border-radius: 4px;
+  font-family: 'Carton-Slab';
+  color: #fff;
+}
+
+body
+{
+  background-color: #F3FFFF;
+  background-image: url(../files/classy_fabric.png);
+}
+
+
+#feedback
+{
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 75px;
+  background-color: #eee;
+  padding: 15px;
+  box-shadow: 0 0 10px #777;
+  border-radius: 4px;
+  font-family: 'CallunaSansRegular';
+  font-size: 18px;
+  margin-bottom: 150px;
+}
+
+input[type=text]
+{
+  width: 695px;
+  height: 30px;
+  font-size: 18px;
+}
+
+textarea
+{
+  width: 695px;
+  height: 150px;
+  font-size: 18px;
+}
+
+
+</style>
+</head>
+<body>
+<div id="wrap">
+<!-- - run Menu Bar - -->
+<div id="menubar">
+  <div id="menu">
+    <ul id="menu_left">
+      <li><a class="menu" href="baldy">Baldy</a></li>
+      <li><a class="menu" href="lookout">Lookout</a></li>
+      <li><a class="menu" href="riverrun">River Run</a></li>
+    </ul><!-- - /menu_left - -->
+    <div id="logo"><a href="/"><img src="../pics/logo.png" /></a></div>
+    <ul id="menu_right">
+      <li><a class="menu" href="map">Map</a></li>
+      <li><a class="menu" href="events">Events</a></li>
+      <li><a class="menu" href="message">Message</a></li>
+    </ul><!-- - /menu_right - -->
+  </div><!-- - /menu - -->
+</div><!-- - /menubar - -->
+<!-- - Menu Bar fin - -->
+
+  <div id="feedback">
+    <form action="/addfeedback" method="post">
+      <p>Feedback:<br />
+        <textarea name="feedback" required ></textarea></p>
+        <p>Name:<br />
+        <input type="text" name="name" placeholder="optional" /></p>
+        <p>Contact:<br/>
+        <input type="text" name="contact" placeholder="optional" /></p>
+        <p align="center"><button type="submit" class="send">Send</button></p>
+      </form>
+  </div><!-- - /feedback - -->
+
+<!-- - run Footer - -->
+<footer>
+  <div id="footer">
+    <div id="footer_left">
+      <ul>
+        <li><a href="about">About</a></li>
+        <li><a href="feedback">Feedback</a></li>
+        <li><a href="#">Blog <span class="smaller">(coming soon!)</span></a></li>
+        <li><form id="donate" action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/867388201863652" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">$<input type="number" class="donate" name="item_price_1" value="5" /> <input type="submit" name="submit" step="5" value="Tip Us" style="background:none;border:0;padding:1;color:#5E6363;font-size: .9em;">
+        <input name="item_name_1" type="hidden" value="localsq tip"/>
+        <input name="item_description_1" type="hidden" value=""/>
+        <input name="item_quantity_1" type="hidden" value="1"/>
+        <input name="item_currency_1" type="hidden" value="USD"/>
+        <input name="shopping-cart.items.item-1.digital-content.url" type="hidden" value="http://sv.localsq.us/"/>
+        <input name="_charset_" type="hidden" value="utf-8"/>
+         </form></li>
+         <li><a href="ticket">Season Pass</a></li>
+      </ul>
+    </div><!-- - /footer_left - -->
+    <div id="footer_right">
+      <ul>
+        <li>localsq</li>
+        <li><span class="smaller">&#169; 2012</span></li>
+        <li><a href="http://kyle.elkhornlabs.com/" target="_blank">Built by Elkhorn Labs</a></li>
+      </ul>
+    </div><!-- - /footer_right - -->
+  </div><!-- - /footer - -->
+</footer>
+<!-- - Footer fin - -->
+
+</div><!-- - /wrap - -->
+</body>
+<foot>
+
+</foot>
+</html>
